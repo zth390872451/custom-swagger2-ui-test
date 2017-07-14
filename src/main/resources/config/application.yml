@@ -1,0 +1,31 @@
+server:
+  context-path: /api
+  port: 8082
+---
+spring:
+  application:
+    name: uwaas-open-api
+---
+ security:
+   basic:
+     enabled: false
+---
+swagger:
+  ui:
+    enable: true #生产环境下关闭swagger ui 设置为false
+#    group: UWAAS Open API
+    title: 开发者API在线文档（V1.0版）
+    description: UWAAS穿戴设备开发者API在线文档
+    version: 1.0.0
+    contactName: xxx
+    contactUrl: http://www.xxx.com
+    contactEmail: devops@xxx.com
+    excludes: /error*
+    basePackage: com.company.start.rest
+debug: true
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /v2/api-docs
